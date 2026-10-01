@@ -1,0 +1,127 @@
+@font-face {
+    font-family: "Ardakaniz";
+    src: url("assets/fonts/Ardakaniz.ttf");
+}
+
+@font-face {
+    font-family: "Monaspace Xenon";
+    src: url("assets/fonts/MonaspaceXenon-Regular.woff");
+}
+
+@media only screen and (min-width: 600px) {
+    :root {
+        --n-per-col: 1;
+    }
+}
+@media only screen and (min-width: 768px) {
+    :root {
+        --n-per-col: 2;
+    }
+}
+@media only screen and (min-width: 992px) {
+    :root {
+        --n-per-col: 4;
+    }
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: "Monaspace Xenon";
+}
+
+#header {
+    margin: 5pt 0 15pt 0;
+}
+
+#header > * {
+    text-align: center;
+    margin: 0;
+}
+
+h1 {
+    font-size: 25pt;
+}
+h5 {
+    font-size: 8pt;
+}
+
+a {
+    color: #9a78d0;
+    text-decoration: underline;
+}
+a:hover {
+    text-decoration: none;
+}
+
+#about {
+    font-family: "Ardakaniz";
+    font-size: 25pt;
+    overflow-y: scroll;
+    height: 1em;
+    border-top: solid 2pt #9a78d0;
+    margin-top: 10pt;
+    border-bottom: solid 2pt #9a78d0;
+    margin-bottom: 10pt;
+    padding: 5pt 5%;
+}
+#about::-webkit-scrollbar {
+    display: none;
+}
+#about > p {
+    margin: 0 0;
+}
+
+strong {
+    color: #9a78d0;
+    font-weight: normal;
+}
+em {
+    color: #b1a5c5;
+    font-style: normal;
+}
+
+.grid-item {
+    margin: 2px;
+    position: relative;
+}
+
+.grid-item > img {
+    transition: opacity 2.5s ease;
+    width: 100%;
+    image-rendering: pixelated;
+}
+
+.grid-item > .dyn-img {
+    position: absolute;
+    inset: 0;
+}
+
+.activable:not(.activated) > .dyn-img,
+.activable.activated > .static-img {
+    opacity: 0;
+}
+
+.activable:not(.activated) > *:hover {
+    cursor: pointer;
+
+    /*box-shadow:
+        0 0 10px #9a78d0,
+        0 0 20px rgba(200, 200, 200, 0.7);*/
+}
+
+.label {
+    position: absolute;
+    font-family: "Monaspace Xenon";
+    font-size: 10pt;
+    font-weight: bolder;
+    color: white;
+    z-index: 2;
+}
+
+.grid-wrapper {
+    font-size: 40pt;
+    display: grid;
+    grid-template-columns: repeat(var(--n-per-col), minmax(0, 1fr));
+    max-width: 100%;
+}

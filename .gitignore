@@ -1,0 +1,12 @@
+# Python-generated/uv files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.venv
+uv.lock
+
+# random tests
+assets/tmp/
