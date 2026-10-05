@@ -82,7 +82,7 @@ em {
 }
 
 .grid-item {
-    margin: 2px;
+    margin: 0;
     position: relative;
 }
 
@@ -120,7 +120,7 @@ em {
 }
 
 .grid-wrapper {
-    font-size: 40pt;
+    font-size: 0;
     display: grid;
     grid-template-columns: repeat(var(--n-per-col), minmax(0, 1fr));
     max-width: 100%;
