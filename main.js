@@ -32,7 +32,7 @@ const labels = [
     "Down To Nothing",
     "I hope you fall in love with being alive again",
 ];
-const today = 1;
+const today = 3;
 
 let minHeight = null;
 for (let i = 0; i < 31; i++) {
