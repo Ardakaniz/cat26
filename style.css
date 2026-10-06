@@ -31,6 +31,20 @@ body {
     margin: 0;
 }
 
+/* Enable scroll even in fullscreen [https://stackoverflow.com/a/51428690] */
+main:fullscreen {
+    overflow: scroll !important;
+}
+main:-ms-fullscreen {
+    overflow: scroll !important;
+}
+main:-webkit-full-screen {
+    overflow: scroll !important;
+}
+main:-moz-full-screen {
+    overflow: scroll !important;
+}
+
 #header {
     margin: 5pt 0 15pt 0;
 }
