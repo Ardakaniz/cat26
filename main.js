@@ -69,6 +69,9 @@ for (let i = 0; i < 31; i++) {
         item.addEventListener("click", () => {
             item.classList.add("activated");
             sound.play();
+
+            if (!document.fullscreenElement)
+                document.getElementsByTagName("main")[0].requestFullscreen();
         });
     }
 
